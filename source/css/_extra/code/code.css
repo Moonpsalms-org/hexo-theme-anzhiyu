@@ -21,19 +21,19 @@
   margin: 0.2rem 0px;
 }
 #article-container ul > li:not(.tab) {
-  padding: 0.2em 0.2em 0.2em 1.4em;
+  padding: 0.2em 0.2em 0.2em 1.1em;
 }
 #article-container ul > li:not(.tab):before {
   border: 0.21em solid var(--anzhiyu-lighttext);
   background: var(--anzhiyu-lighttext);
 }
 #article-container ul > li:not(.tab)::before {
-  top: 0.78em;
-  width: 0.42em;
-  height: 0.42em;
+  top: 1.00em;
+  width: 0.005em;
+  height: 0.005em;
   border-radius: 0.42em;
   content: "";
-  line-height: 0.42em;
+  line-height: 0.10em;
 }
 
 #article-container ol li::before,
