@@ -1,15 +1,35 @@
 #album
-  - let album_background = page.top_background
+  - let album_background = page.top_background    //顶部卡片图片
+  - let album_item_title = page.item_title        //标题
+  - let album_up_text = page.up_text              //左上角小字
+  - let album_down_text = page.down_text          //左下角小字
+  - let album_button_text = page.button_text      //按钮文字
   .author-content.author-content-item.album.single(style=`${album_background ? `background: url(${album_background}) top / cover no-repeat;` : ""}`)
     .card-content
-      .author-content-item-tips 相册集
-      span.author-content-item-title 这里是我的相册集哦😯
+      if album_up_text
+        span.author-content-item-tips= album_up_text
+      else
+        .author-content-item-tips 相册集
+
+      if album_item_title
+        span.author-content-item-title= album_item_title
+      else
+        span.author-content-item-title 这里是我的相册集哦😯
+
+
       .content-bottom
-        .tips 每一张照片都是一次美好的记忆。
+        if album_down_text
+          span.author-content-item-tips= album_down_text
+        else
+          .author-content-item-tips 每一张照片都是一次美好的记忆。
+
       .banner-button-group
-        a.banner-button(onclick='pjax.loadUrl("/about/")')
+        a.banner-button(onclick='pjax.loadUrl("/")')
           i.anzhiyufont.anzhiyu-icon-arrow-circle-right(style='font-size: 1.5rem')
-          span.banner-button-text 关于本人
+          if album_button_text
+            span.banner-button-text= album_button_text
+          else
+            span.banner-button-text 返回主页
   .card-album
     each i in site.data.album
       .card(onclick=`pjax.loadUrl("${i.path_name}")`)
