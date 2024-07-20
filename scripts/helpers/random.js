@@ -20,7 +20,11 @@ hexo.extend.generator.register("random", function (locals) {
   let result = `var posts=${JSON.stringify(
     posts
   )};function toRandomPost(){
-    ${pjaxEn ? "pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);" : "window.location.href='/'+posts[Math.floor(Math.random() * posts.length)];"}
+    ${
+      pjaxEn
+        ? "pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);"
+        : "window.location.href='/'+posts[Math.floor(Math.random() * posts.length)];"
+    }
   };`;
 
   if (themeConfig.footer.list.enable && randomNumberFriend > 0) {
