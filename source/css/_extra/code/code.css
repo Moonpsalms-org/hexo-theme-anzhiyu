@@ -41,20 +41,21 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  background: var(--anzhiyu-main);
-  color: rgb(255, 255, 255);
+  /* background: var(--anzhiyu-main); */
+  color: var(--anzhiyu-main);
   transition: all 0.3s ease-out 0s;
 }
 #article-container ol > li::before {
-  margin-top: 0.65em;
+  margin-top: 0.7em;
   width: 1.45em;
   height: 1.45em;
   border-radius: 0.725em;
-  content: counter(li);
+  font-weight: bolder;
+  content: counter(li) ".";
   counter-increment: li 1;
   text-align: center;
-  font-size: 0.85em;
-  line-height: 1.45em;
+  font-size: 1.10em;
+  line-height: 0.8em;
 }
 #article-container ol[start] {
   counter-reset: unset;
