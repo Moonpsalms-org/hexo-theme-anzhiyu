@@ -1091,6 +1091,33 @@ home_top:
     image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
     link: https://docs.anheyu.com/
 
+#首页右侧的6篇文章推荐，至少应填写一篇的数据
+top_group_list:
+
+  - title: 【杂谈】[NSFW] 荒诞的相互慰藉——相思相愛ロリータ游玩感想
+    path: /e04fccef/
+    cover: https://graph.sayafx.top/2024/05/6f2d353240335e3c66daa3847282c3d8.webp
+
+  # - title: "文章2标题"
+  #   path: "文章2路径"
+  #   cover: "文章2封面图像URL"
+
+  # - title: "文章3标题"
+  #   path: "文章3路径"
+  #   cover: "文章3封面图像URL"
+
+  # - title: "文章4标题"
+  #   path: "文章4路径"
+  #   cover: "文章4封面图像URL"
+
+  # - title: "文章5标题"
+  #   path: "文章5路径"
+  #   cover: "文章5封面图像URL"
+
+  # - title: "文章6标题"
+  #   path: "文章6路径"
+  #   cover: "文章6封面图像URL"
+
 # 朋友圈配置
 friends_vue:
   enable: false
