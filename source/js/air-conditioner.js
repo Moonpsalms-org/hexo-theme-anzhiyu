@@ -3658,8 +3658,8 @@ var __defProp = Object.defineProperty,
             }],
             ["__scopeId", "data-v-1643928e"]
         ]),
-        Yr = "https://anzhiy.cn",
-        Xr = "anzhiyu",
+        Yr = "https://www.sayafx.top",
+        Xr = "ysq7x",
         Qr = "https://github.com/anzhiyu-c/air-conditioner-vue",
         ta = {
             "class": "copyright-box"
@@ -3687,7 +3687,7 @@ var __defProp = Object.defineProperty,
                 href: Yr,
                 target: "_blank",
                 rel: "noreferrer"
-            }, "安知鱼 @" + u(Xr), 9, oa)]), Li("p", null, "2022 - " + u((new Date).getFullYear()), 1)]))
+            }, "月谣 @" + u(Xr), 9, oa)]), Li("p", null, "2022 - " + u((new Date).getFullYear()), 1)]))
         }), [
             ["__scopeId", "data-v-13c379f0"]
         ]),
