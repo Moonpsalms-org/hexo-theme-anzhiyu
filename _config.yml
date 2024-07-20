@@ -909,6 +909,7 @@ readmode: true
 # 中控台
 centerConsole:
   enable: true
+  music_title: 流星-ysq7x
   card_tags:
     enable: true
     limit: 40 # if set 0 will show all
