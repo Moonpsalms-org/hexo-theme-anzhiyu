@@ -29,6 +29,7 @@ hexo.extend.generator.register("random", function (locals) {
 
   if (themeConfig.footer.list.enable && randomNumberFriend > 0) {
     result += `var friend_link_list=${JSON.stringify(link_list)};
+    var originalFriendLinkList = friend_link_list.slice();
     var refreshNum = 1;
     function friendChainRandomTransmission() {
       const randomIndex = Math.floor(Math.random() * friend_link_list.length);
@@ -55,6 +56,10 @@ hexo.extend.generator.register("random", function (locals) {
   
       let count = 0;
 
+      if (friend_link_list.length < ${randomNumberFriend}) {
+        friend_link_list = originalFriendLinkList.slice();
+      }
+
       while (friend_link_list.length && count < ${randomNumberFriend}) {
         const randomIndex = Math.floor(Math.random() * friend_link_list.length);
         const { name, link, avatar } = friend_link_list.splice(randomIndex, 1)[0];
@@ -69,7 +74,7 @@ hexo.extend.generator.register("random", function (locals) {
   
       let html = finalLinkList
         .map(({ name, link }) => {
-          const returnInfo = "<a class='footer-item' href='" + link + "' target='_blank' rel='noopener nofollow'>" + name + "</a>"
+          const returnInfo = "<a class='footer-item' href='" + link + "' target='_blank' rel='noopener nofollow'>" + name + "</a>";
           return returnInfo;
         })
         .join("");
@@ -80,7 +85,7 @@ hexo.extend.generator.register("random", function (locals) {
 
       setTimeout(()=>{
         footerRandomFriendsBtn.style.opacity = "1";
-      }, 300)
+      }, 300);
     };`;
   }
   return {
